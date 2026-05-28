@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "commodity-analyser"
+version = "0.1.0"
+description = "CLI tool for commodity price analysis"
+packages = [{include = "commodity_analyser"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "*"
+numpy = "*"
+matplotlib = "*"
+click = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+
+[tool.poetry.scripts]
+commodity-analyser = "commodity_analyser.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
